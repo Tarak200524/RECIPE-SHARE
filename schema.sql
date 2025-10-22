@@ -5,6 +5,5 @@ CREATE TABLE recipes (
     title TEXT NOT NULL,
     category TEXT NOT NULL,
     ingredients TEXT NOT NULL,
-    instructions TEXT NOT NULL,
-    image TEXT
+    instructions TEXT NOT NULL
 );

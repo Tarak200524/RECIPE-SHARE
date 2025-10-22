@@ -6,25 +6,21 @@
 <div class="container">
     <div class="recipe-detail">
         <h2>{{ recipe['title'] }}</h2>
-        
-        {% if recipe['image'] %}
-            <img src="{{ url_for('static', filename='uploads/' + recipe['image']) }}" alt="{{ recipe['title'] }}" class="recipe-image">
-        {% endif %}
-        
+
         <div class="recipe-meta">
             <span class="category-badge">{{ recipe['category'] }}</span>
         </div>
-        
+
         <section class="recipe-section">
             <h3>Ingredients</h3>
             <pre>{{ recipe['ingredients'] }}</pre>
         </section>
-        
+
         <section class="recipe-section">
             <h3>Instructions</h3>
             <pre>{{ recipe['instructions'] }}</pre>
         </section>
-        
+
         <div class="action-buttons">
             <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
             <form method="post" action="{{ url_for('delete_recipe', id=recipe['id']) }}" style="display:inline;">

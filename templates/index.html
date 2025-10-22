@@ -5,17 +5,11 @@
 {% block content %}
 <div class="container">
     <h2>All Recipes</h2>
-    
+
     {% if recipes %}
         <div class="recipe-grid">
             {% for recipe in recipes %}
             <div class="recipe-card">
-                {% if recipe['image'] %}
-                    <img src="{{ url_for('static', filename='uploads/' + recipe['image']) }}" alt="{{ recipe['title'] }}">
-                {% else %}
-                    <div class="no-image">No Image</div>
-                {% endif %}
-                
                 <div class="recipe-info">
                     <h3>{{ recipe['title'] }}</h3>
                     <p class="category">Category: {{ recipe['category'] }}</p>

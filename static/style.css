@@ -75,22 +75,7 @@ h2 {
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-.recipe-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
 
-.no-image {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-}
 
 .recipe-info {
     padding: 1.5rem;
@@ -166,8 +151,7 @@ h2 {
 }
 
 .form-group input[type="text"],
-.form-group textarea,
-.form-group input[type="file"] {
+.form-group textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ddd;
@@ -192,13 +176,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.recipe-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 1rem 0;
-}
+
 
 .recipe-meta {
     margin: 1rem 0;
