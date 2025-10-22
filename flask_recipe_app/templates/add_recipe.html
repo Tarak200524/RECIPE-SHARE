@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Recipe{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Add a New Recipe</h2>
+    
+    <form method="post" enctype="multipart/form-data" class="recipe-form">
+        <div class="form-group">
+            <label for="title">Recipe Title:</label>
+            <input type="text" id="title" name="title" required placeholder="e.g., Chocolate Cake">
+        </div>
+        
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required placeholder="e.g., Dessert, Main Course">
+        </div>
+        
+        <div class="form-group">
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" required placeholder="List all ingredients, one per line" rows="6"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" required placeholder="Step-by-step cooking instructions" rows="8"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="image">Recipe Image (optional):</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save Recipe</button>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
